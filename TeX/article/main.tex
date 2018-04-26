@@ -1,0 +1,58 @@
+
+%%
+%% TITLE
+%%
+
+\title{Article title} \author{
+  Spencer Woody\footnote{The University of Texas at Austin, Department
+    of Statistics and Data Science. Email:
+    \texttt{spencer.woody@utexas.edu}}} \date{\today}
+
+%%
+%% PREAMBLE
+%%
+
+% Page format
+\documentclass[10pt]{article} % 10 pt might be a bit small
+\usepackage[margin=1.25in]{geometry} % Set the margins
+
+% Fonts
+\usepackage{mathpazo} % Palatino for main and math text
+\usepackage{inconsolata} % Inconsolata fixed width font
+
+% Bibliography format
+\usepackage[round]{natbib} 
+\bibliographystyle{plainnat}
+
+% Basics
+\usepackage{graphicx} % including images
+\usepackage{amsmath} 
+\usepackage{amssymb}
+
+% For using Computer Modern version of blackboard symbols
+\AtBeginDocument{
+  \DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+  \DeclareSymbolFontAlphabet{\mathbb}{AMSb}}
+
+%% 
+%% BEGIN DOCUMENT
+%%
+
+\begin{document}
+
+\maketitle
+
+% Abstract
+\input{include/abstract}
+
+% Main body
+\input{include/intro}
+
+% Bibliography
+\bibliography{main}
+
+%%
+%% END DOCUMENT
+%%
+
+\end{document}

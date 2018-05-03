@@ -1,0 +1,59 @@
+\section{Formatting}
+
+% -----------------------------------------------------------------------
+
+\begin{frame}
+  \frametitle{Formatting guidelines}
+  \begin{itemize}
+  \item In general, set the format of your presentation to target the
+    ``lowest common denominator''
+    \begin{itemize}
+    \item Use a 4$\times$3 aspect ratio for older projectors
+    \item Use \textbf{large} text for the body and plots
+    \item Use color palettes readable by those who are colorblind
+    \end{itemize}
+  \item Body text on a screen is most readable when it is sans-serif,
+    but also use a standard serif font (e.g. Palatino) which has rich
+    math support for math equations
+    \begin{itemize}
+    \item Lato for body text
+    \item Palatino for math
+    \item Inconsolata for \texttt{fixed width} text.
+    \end{itemize}
+  \item Don't overload the slide like I did here :-)
+  \end{itemize}
+\end{frame}
+
+% -----------------------------------------------------------------------
+
+\begin{frame}
+  \frametitle{Preview of font appearances}
+
+  The density of the univariate Gaussian random variable denoted by
+  $x \sim \mathcal{N}$ is given by $f(x; \mu, \sigma^2)$, for location
+  parameter $\mu$ and scale parameter $\sigma > 0$,
+%
+  \begin{align*}
+    f(x; \mu, \sigma^2) &= \frac{1}{\sqrt{2\pi\sigma^2}} \exp 
+           \left[
+           -\frac{1}{2\sigma^2}(x - \mu)^2
+           \right]
+  \end{align*}
+%
+  Generally, there is also the multivariate Gaussian
+  $\mathbf{x} \sim \mathcal{N}_p(\mathbf{m}, \Sigma)$. The maximum
+  likelihood estimate is
+  %
+  \begin{align*}
+    (\hat{\mu}, \hat{\sigma}^2) &= \max_{\mu, \sigma} \prod_{i=1}^N f(x_i; \mu, \sigma^2).
+  \end{align*}
+  
+\end{frame}
+
+% -----------------------------------------------------------------------
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

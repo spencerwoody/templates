@@ -1,0 +1,74 @@
+
+% Specify sans body text, math serif text
+\documentclass[sans, mathserif, professionalfont]{beamer}
+
+% Specify fonts
+\usepackage[default]{lato} % Sans sefif body text
+\usepackage{mathpazo} % Palatino for math
+\usepackage{inconsolata} % Inconsolata fixed width font
+
+% Use mathbb symbols from Computer Modern
+\AtBeginDocument{
+  \DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+  \DeclareSymbolFontAlphabet{\mathbb}{AMSb}}
+
+% Graphics, tables, math, etc.
+\usepackage{graphicx} 
+\usepackage{booktabs} 
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{amssymb}
+
+% Formatting
+\setbeamertemplate{frametitle}
+  {\begin{flushleft}\smallskip 
+    \insertframetitle\par 
+   \vskip1pt\end{flushleft}}
+\setbeamertemplate{itemize item}{$\bullet$}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[text line]{%
+    \hfill\strut{%
+        \scriptsize\sf\color{black!60}%
+        \quad\insertframenumber
+    }%
+    \hfill
+}
+ \setbeamertemplate {footline}{\quad\hfill\insertframenumber\strut\quad}
+\setbeamertemplate{footline}{
+  \hfill%
+  \usebeamercolor[fg]{page number in head/foot}%
+  \usebeamerfont{page number in head/foot}%
+  \setbeamertemplate{page number in head/foot}[framenumber]%
+  \usebeamertemplate*{page number in head/foot}\kern1.5em\vskip8pt
+}
+
+
+% You can customize color settings here
+
+% % Define some colors:
+% \definecolor{DarkFern}{HTML}{407428}
+% \definecolor{DarkCharcoal}{HTML}{4D4944}
+% \colorlet{Fern}{DarkFern!85!white}
+% \colorlet{Charcoal}{DarkCharcoal!85!white}
+% \colorlet{LightCharcoal}{Charcoal!50!white}
+% \colorlet{AlertColor}{orange!80!black}
+% \colorlet{DarkRed}{red!70!black}
+% \colorlet{DarkBlue}{blue!70!black}
+% \colorlet{DarkGreen}{green!70!black}
+ 
+% % Use the colors:
+% \setbeamercolor{title}{fg=DarkFern}
+% \setbeamercolor{structure}{fg=Fern}
+% \setbeamercolor{titlelike}{parent=structure}
+% \setbeamercolor{frametitle}{fg=DarkFern}
+% \setbeamercolor{normal text}{fg=DarkCharcoal}
+% \setbeamercolor{block title}{fg=black,bg=Fern!25!white}
+% \setbeamercolor{block body}{fg=black,bg=Fern!25!white}
+% \setbeamercolor{alerted text}{fg=AlertColor}
+% \setbeamercolor{itemize item}{fg=Charcoal}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

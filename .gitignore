@@ -323,3 +323,5 @@ Temporary Items
 .apdisk
 
 
+# R history file (who actually uses these files anyway?)
+.Rhistory

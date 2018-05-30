@@ -1,0 +1,3 @@
+[submodule "R/BayesLogit"]
+	path = R/BayesLogit
+	url = https://github.com/cran/BayesLogit

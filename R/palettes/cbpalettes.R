@@ -21,6 +21,7 @@ ggplot(data.frame(x = seq_along(cbPalette), y = 1)) +
   theme_void() + 
   theme(legend.position = "blank") + 
   labs(caption = "CB palette with grey")
+ggsave("CBpallete-grey.png", device = "png")
 
 # The palette with black:
 cbbPalette <- c("#000000", 
@@ -38,7 +39,7 @@ ggplot(data.frame(x = seq_along(cbbPalette), y = 1)) +
   theme_void() + 
   theme(legend.position = "blank") + 
   labs(title = "CB palette with black")
-
+ggsave("CBpallete-black.png", device = "png")
 
 # Using ggthemes ----------------------------------------------------------
 

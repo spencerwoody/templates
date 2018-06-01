@@ -1,4 +1,8 @@
 
+## C++ build files for R package developmentxs
+src/*.o
+src/*.so
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof

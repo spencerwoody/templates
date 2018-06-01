@@ -9,7 +9,7 @@ install.packages(
     "RcppProgress",
     "glmnet",
     "caret",
-    "pROC"
+    "pROC",
     "ggthemes",
     "latex2exp",
     "mvtnorm"

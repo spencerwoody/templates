@@ -1,0 +1,26 @@
+#+TITLE: Example of simple article
+#+AUTHOR: Spencer Woody
+#+EMAIL: spencer.woody@utexas.edu
+
+#+OPTIONS: ':t toc:nil author:t email:t
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [letter,10pt]
+#+LaTeX_HEADER: \usepackage{mathpazo}
+#+LaTeX_HEADER: \usepackage{inconsolata}
+
+#+BEGIN_ABSTRACT
+This is an *abstract* with ordinary =Org-mode= /markup/.
+#+END_ABSTRACT
+
+# \begin{abstract}
+# Stuff
+# \end{abstract}
+
+* First header
+
+Sample text
+
+\begin{align}
+\log f(x) &= C - \frac{1}{2\sigma^2} x^2
+\end{align}

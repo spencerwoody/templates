@@ -16,7 +16,13 @@
 
 % BEGIN DOCUMENT ---------------------------------------------------
 
+% -------------------------------------------------------------------------
+% Begin document
+
 \begin{document}
+
+% -------------------------------------------------------------------------
+% Content
 
 % Title slide
 \input{format/title}
@@ -30,6 +36,20 @@
 \input{input/example-content}
 \input{input/conclusion}
 
+% -------------------------------------------------------------------------
+
+% Bibliography
+\begin{frame}[t,allowframebreaks]
+\frametitle{References}
+
+\footnotesize
+\begingroup
+\renewcommand{\section}[2]{}
+\bibliography{main}
+\endgroup
+\normalsize
+
+\end{frame}
 
 
 

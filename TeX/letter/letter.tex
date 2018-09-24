@@ -1,12 +1,11 @@
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+% -------------------------------------------------------------------------
+% Packages and other document configurations
 
 \documentclass[12pt]{letter} 
 
 \usepackage{times} 
-
+\usepackage{inconsolata}
 
 % Margins
 \topmargin=-1in 
@@ -22,19 +21,19 @@
                             % left, comment this line to have the date
                             % on the right
 
+\date{\today}
+
 \begin{document}
 
-% ------------------------------------------------------------------
-% ADDRESSEE SECTION
-% ------------------------------------------------------------------
+% -------------------------------------------------------------------------
+% Addressee
 
 \begin{letter}{Santa Clause \\
-North Pole \\
+North Pole 
 }
 
-% ------------------------------------------------------------------
-%	YOUR NAME & ADDRESS SECTION
-% ------------------------------------------------------------------
+% -------------------------------------------------------------------------
+% Your name and address
 
 \begin{center}
 \large \textsc{Spencer Woody} \\ 
@@ -45,13 +44,10 @@ North Pole \\
 
 \signature{Spencer Woody \\ PhD Student}
 
-%-------------------------------------------------------------------------
-%	LETTER CONTENT SECTION
-%-------------------------------------------------------------------------
+% -------------------------------------------------------------------------
+% Content of letter
 
 \opening{Dear Santa,} 
-
-
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus
 urna sit amet justo feugiat varius. Vestibulum ante ipsum primis in
@@ -85,10 +81,8 @@ luctus mauris lacinia, fermentum ipsum.
 
 \closing{Sincerely yours,}
 
-
-
-
 %------------------------------------------------------------------------
+% End the letter
 
 \end{letter}
 

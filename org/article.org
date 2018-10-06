@@ -13,9 +13,6 @@
 This is an *abstract* with ordinary =Org-mode= /markup/.
 #+END_ABSTRACT
 
-# \begin{abstract}
-# Stuff
-# \end{abstract}
 
 * First header
 

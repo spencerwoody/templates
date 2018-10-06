@@ -1,7 +1,7 @@
 
 
 % -------------------------------------------------------------------------
-% Title
+% Title, authors, date
 
 \title{Article template}
 
@@ -12,13 +12,13 @@
 \date{\today}
 
 % -------------------------------------------------------------------------
-%%
-%% PREAMBLE
-%%
+% Preamble
 
 % Page format
-\documentclass[10pt]{article} % 10 pt might be a bit small
-\usepackage[margin=1.25in]{geometry} % Set the margins
+\documentclass[letter, 10pt]{article} % Set the paper size and font
+                                      % size (10pt might be too small)
+
+\usepackage[margin = 1.5in]{geometry} % Set the margins
 
 % Fonts
 \usepackage{mathpazo} % Palatino for main and math text
@@ -78,6 +78,15 @@
 
 % -------------------------------------------------------------------------
 % Bibliography
+
+% \pagebreak
+
+% Left-justified bibiliography
+
+% \begin{flushleft}
+%   \bibliography{main}
+% \end{flushleft}
+
 \bibliography{main}
 
 % -------------------------------------------------------------------------

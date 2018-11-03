@@ -2,6 +2,6 @@
 
 ## Contact
 
-   Spencer Woody (email: `spencer.woody@utexas.edu`)
+Spencer Woody (email: `spencer.woody@utexas.edu`)
 
    

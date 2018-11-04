@@ -1,17 +1,6 @@
 
 
 % -------------------------------------------------------------------------
-% Title, authors, date
-
-\title{Article template}
-
-\author{Spencer Woody\footnote{The University of Texas at Austin,
-    Department of Statistics and Data Science. Email:
-    \texttt{spencer.woody@utexas.edu}}}
-
-\date{\today}
-
-% -------------------------------------------------------------------------
 % Preamble
 
 % Page format
@@ -30,6 +19,9 @@
 \usepackage{amssymb}
 \usepackage{subcaption}
 
+\usepackage{authblk}            % Multiple authors
+\renewcommand\Authands{ and }
+
 % Bibliography format
 \usepackage[round]{natbib} 
 \bibliographystyle{plainnat}
@@ -40,8 +32,33 @@
   \DeclareSymbolFontAlphabet{\mathbb}{AMSb}}
 
 % -------------------------------------------------------------------------
+% Title, authors, date
+
+\title{Article template}
+
+
+
+\author{Spencer Woody\footnote{The University of Texas at Austin,
+    Department of Statistics and Data Science. Email:
+    \texttt{spencer.woody@utexas.edu}}}
+
+% For multiple authors:
+
+% \author[1]{Author One\thanks{Corresponding author. Email to
+%     \texttt{name@domain.com}}}
+
+% \author[2]{Author Two}
+
+% \affil[1]{Institution One}
+
+% \affil[2]{Insitution Two}
+
+
+% \date{\today}
+
+% -------------------------------------------------------------------------
 %%
-%% END DOCUMENT
+%% BEGIN DOCUMENT
 %%
 % -------------------------------------------------------------------------
 
@@ -101,3 +118,7 @@
 
 
 \end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

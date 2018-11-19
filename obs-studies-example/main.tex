@@ -1,0 +1,143 @@
+\documentclass[twoside,11pt]{article}
+
+% Any additional packages needed should be included after obs_study_style.
+% Note that obs_study_style.sty includes epsfig, amssymb, natbib and graphicx,
+% and defines many common macros, such as 'proof' and 'example'.
+%
+% It also sets the bibliographystyle to plainnat; for more information on
+% natbib citation styles, see the natbib documentation, a copy of which
+
+\usepackage{obs_study_style}
+
+% -------------------------------------------------------------------------
+% Define macros
+% -------------------------------------------------------------------------
+
+\newcommand{\dataset}{{\cal D}}
+\newcommand{\fracpartial}[2]{\frac{\partial #1}{\partial  #2}}
+
+
+% -------------------------------------------------------------------------
+% Headings
+% -------------------------------------------------------------------------
+
+
+
+% For papers submitted for review, just fill in author names For
+% accepted papers, heading arguments are
+% {volume}{year}{pages}{submitted}{published}{author-full-names}
+\heading{}{}{}{}{}{Carlos Carvalho, Jared Murray and Spencer Woody}
+
+% Short headings should be running head and authors last names
+
+\ShortHeadings{Invited Workshop: Empirical Investigation of Methods
+  for Heterogeneity}{Carvalho, Murray
+  and Woody} \firstpageno{1}
+
+% -------------------------------------------------------------------------
+% Begin document
+% -------------------------------------------------------------------------
+
+\begin{document}
+
+% -------------------------------------------------------------------------
+% Title and authors
+% -------------------------------------------------------------------------
+
+
+\title{Invited Workshop: Empirical Investigation of Methods for
+  Heterogeneity}
+
+\author{\name Carlos Carvalho \email
+  carlos.carvalho@mccombs.utexas.edu \\
+  \addr Department of Statistics Data Science \\ Department of
+  Information, Risk and Operations Management  \\
+  The University of Texas at Austin\\
+  Austin, TX 78712, USA
+  %%
+  \AND
+  %%
+  \name Jared Murray \email
+  jared.murray@mccombs.utexas.edu \\
+  \addr Department of
+  Information, Risk and Operations Management  \\
+  The University of Texas at Austin\\
+  Austin, TX 78712, USA
+  %%
+  \AND
+  %
+  \name Spencer Woody  \email
+  spencer.woody@utexas.edu \\
+  \addr Department of Statistics and Data Science  \\
+  The University of Texas at Austin\\
+  Austin, TX 78712, USA}
+
+
+
+\maketitle
+
+% -------------------------------------------------------------------------
+% Abstract and keywords
+% -------------------------------------------------------------------------
+
+\begin{abstract}%   <- trailing '%' for backward compatibility of .sty file
+  Psychohistory combines history, sociology, and mathematical
+  statistics to make general predictions about the future behavior of
+  very large groups of people. There are two axioms of psychohistory:
+  (1) the population whose behaviour is modeled should be sufficiently
+  large; (2) the population should remain in ignorance of the results
+  of the application of psychohistorical analyses.  In this paper, we
+  use psychohistory to predict the results of large observational
+  studies.
+\end{abstract}
+
+\begin{keywords}
+  Heterogeneous treatment effects 
+\end{keywords}
+
+% -------------------------------------------------------------------------
+% -------------------------------------------------------------------------
+% CONTENT
+% -------------------------------------------------------------------------
+% -------------------------------------------------------------------------
+
+
+\input{input/introduction}
+...
+
+% Acknowledgements should go at the end, before appendices and references
+
+% -------------------------------------------------------------------------
+% Acknowledgement
+% -------------------------------------------------------------------------
+
+\acks{We would like to acknowledge support for this project from
+  Obi-Wan Kenobi of the Galactic Republic.}
+
+% -------------------------------------------------------------------------
+% Appendices
+% -------------------------------------------------------------------------
+
+% Manual newpage inserted to improve layout of sample file - not
+% needed in general before appendices/bibliography.
+
+\newpage
+
+\appendix
+
+\input{input/appendix/appendix-example}
+
+
+% -------------------------------------------------------------------------
+% Bibliography
+% -------------------------------------------------------------------------
+
+\vskip 0.2in
+\bibliography{main}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

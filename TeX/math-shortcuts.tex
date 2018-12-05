@@ -1,9 +1,21 @@
 
-\newcommand{\N}{\mathcal{N}}
-\newcommand{\var}{\mathrm{var}}
+% Distributions
+\newcommand{\N}{\mathcal{N}}    %Gaussian distribution
+\newcommand{\IG}{\mathcal{IG}}    %Inverse gamma
+\newcommand{\G}{\mathcal{G}}    %Gamma
+
+% Variance, expectation, covariance
+\newcommand{\var}{\mathrm{var}} 
 \newcommand{\Var}{\mathrm{Var}}
 \newcommand{\cov}{\mathrm{cov}}
 \newcommand{\Cov}{\mathrm{Cov}}
 \newcommand{\E}{\mathrm{E}}
+
+% Matrices: zeros, identity
 \newcommand{\Oh}{\mathcal{O}}
 \newcommand{\I}{\mathcal{I}}
+
+% Independence symbol
+\newcommand\ind{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+

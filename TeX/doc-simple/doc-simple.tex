@@ -1,11 +1,16 @@
 
-\documentclass{article}
+% -------------------------------------------------------------------------
+% Preamble
+
+\documentclass[usletter]{article}
 
 % Fonts
-\usepackage{palatino}
+\usepackage{mathpazo}
 \usepackage{inconsolata}
 
-% Basics
+% \usepackage[margin = 1.5in]{geometry} % Set the margins
+
+% basics
 \usepackage{setspace}
 \usepackage{graphicx} % including images
 \usepackage{amsmath} 
@@ -26,19 +31,38 @@
   \DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
   \DeclareSymbolFontAlphabet{\mathbb}{AMSb}}
 
+% -------------------------------------------------------------------------
+% Title, author, institution, date
 
 \title{Simple \LaTeX document}
-\author{Spencer Woody}
+\author{Spencer Woody\footnote{Email to \texttt{spencer.woody@utexas.edu}}}
+\affil{The University of Texas at Austin}
 \date{\today}
+
+% For multiple authors:
+
+% \author[1]{Author One\thanks{Corresponding author. Email to
+%     \texttt{name@domain.com}}}
+
+% \author[2]{Author Two}
+
+% \affil[1]{Institution One}
+
+% \affil[2]{Insitution Two}
+
+% -------------------------------------------------------------------------
+% Begin document
 
 \begin{document}
 
 \maketitle
 
+% -------------------------------------------------------------------------
+% Content
 
 
-
-
+% -------------------------------------------------------------------------
+% End document
 
 \end{document}
 

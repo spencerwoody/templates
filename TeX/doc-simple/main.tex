@@ -1,0 +1,81 @@
+
+% -------------------------------------------------------------------------
+% Preamble
+
+\documentclass[usletter]{article}
+
+% Fonts
+\usepackage{mathpazo}
+\usepackage{inconsolata}
+
+% \usepackage[margin = 1.5in]{geometry} % Set the margins
+
+% basics
+\usepackage{setspace}
+\usepackage{graphicx} % including images
+\usepackage{amsmath} 
+\usepackage{amssymb}
+\usepackage{subcaption}
+\usepackage{enumerate}
+\usepackage{booktabs}
+\usepackage{xcolor}
+
+\usepackage{authblk}            % Multiple authors
+\renewcommand\Authands{ and }
+
+% Bibliography format
+\usepackage[round]{natbib} 
+\bibliographystyle{plainnat}
+
+% For using Computer Modern version of blackboard symbols
+\AtBeginDocument{
+  \DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+  \DeclareSymbolFontAlphabet{\mathbb}{AMSb}}
+
+% -------------------------------------------------------------------------
+% Title, author, institution, date
+
+\title{Simple \LaTeX document}
+\author{Spencer Woody\footnote{Email to \texttt{spencer.woody@utexas.edu}}}
+\affil{The University of Texas at Austin}
+\date{\today}
+
+% For multiple authors:
+
+% \author[1]{Author One\thanks{Corresponding author. Email to
+%     \texttt{name@domain.com}}}
+
+% \author[2]{Author Two}
+
+% \affil[1]{Institution One}
+
+% \affil[2]{Insitution Two}
+
+% -------------------------------------------------------------------------
+% Begin document
+
+\begin{document}
+
+\maketitle
+
+% -------------------------------------------------------------------------
+% Content
+
+
+\cite{WoodyScott}
+
+% -------------------------------------------------------------------------
+% Bibliography
+
+\pagebreak
+\bibliography{main}
+
+% -------------------------------------------------------------------------
+% End document
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

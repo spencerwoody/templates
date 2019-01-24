@@ -1,0 +1,110 @@
+
+% -------------------------------------------------------------------------
+% Preamble
+
+\documentclass[letter, 10pt]{article}
+
+% Fonts
+\usepackage{mathpazo}
+\usepackage{inconsolata}
+
+% Basics
+\usepackage{setspace}
+\usepackage{graphicx} % including images
+\usepackage{amsmath} 
+\usepackage{amssymb}
+\usepackage{subcaption}
+\usepackage{enumerate}
+\usepackage{booktabs}
+
+\usepackage{authblk}            % Multiple authors
+\renewcommand\Authands{ and }
+
+% Bibliography format
+\usepackage[round]{natbib} 
+\bibliographystyle{plainnat}
+
+% For using Computer Modern version of blackboard symbols
+\AtBeginDocument{
+  \DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+  \DeclareSymbolFontAlphabet{\mathbb}{AMSb}}
+
+% Math shortcuts
+\input{math-shortcuts}
+
+% -------------------------------------------------------------------------
+
+
+\title{Gaussian AR(1) model}
+\author{Spencer Woody}
+\date{\today}
+
+% -------------------------------------------------------------------------
+% Begin document
+
+\begin{document}
+
+\maketitle
+
+% -------------------------------------------------------------------------
+% BODY
+
+\paragraph{Model}
+
+For a fixed $\phi$ and $\tau^2$,
+\begin{align*}
+  x_t \mid x_{t - 1} &\sim \N(\phi x_{t-1}, \tau^2)
+\end{align*}
+
+\subparagraph{Marginal mean}
+
+Assume a stationary process and $\phi \neq 1$. The marginal
+expectation of $x_t$ is
+\begin{align*}
+  m := \E(x_t) &= \E(\E(x_t \mid x_{t-1})) \\
+               &= \E(\phi x_{t-1}) \\
+               &= \phi m ,
+\end{align*}
+implying that $m = 0$.
+
+\subparagraph{Marginal variance}
+
+\begin{align*}
+  v := \Var(x_t) &= \E(\Var(x_t \mid x_{t - 1})) + \Var(\E(x_t \mid x_{t-1}))\\
+                 &= \E(\tau^2) + \Var{\phi x_{t-1}} \\
+                 &= \tau^2 + \phi^2 v,
+\end{align*}
+implying that $v = \tau^2 / (1 - \phi^2)$, and this quantity is
+greater than zero only if $|\phi| < 1$.
+
+\subparagraph{Joint distribution}
+
+\begin{align*}
+  x_{1:n} \sim \N(0, v\Phi_n) ,
+\end{align*}
+where $\Phi_n$ is the correlation matrix, and can be defined
+element-wise. The $(i, j)$ element of this matrix is,
+\begin{align*}
+  \{\Phi_n\}_{ij} &= \phi^{|i - j|}.
+\end{align*}
+The inverse of the correlation matrix, $\Omega_n := \Phi_n^{-1}$ is
+sparse (tri-diagonal), making for efficient likelihood evaluations. It
+can also be defined element-wise,
+\begin{align*}
+  \{\Omega_n\}_{ij} = \frac{1}{1 - \phi^2} \cdot
+  \begin{cases}
+    1 & \text{ if } i = j \\
+    -\phi & \text{ if } i = j \pm 1 \\
+    0 & \text{ otherwise}
+  \end{cases}
+\end{align*}
+
+% -------------------------------------------------------------------------
+% End document
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

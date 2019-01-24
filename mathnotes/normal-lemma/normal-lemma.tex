@@ -1,0 +1,154 @@
+
+% -------------------------------------------------------------------------
+% Preamble
+
+\documentclass[letter, 10pt]{article}
+
+% Fonts
+\usepackage{mathpazo}
+\usepackage{inconsolata}
+
+% Basics
+\usepackage{setspace}
+\usepackage{graphicx} % including images
+\usepackage{amsmath} 
+\usepackage{amssymb}
+\usepackage{subcaption}
+\usepackage{enumerate}
+\usepackage{booktabs}
+
+\usepackage{authblk}            % Multiple authors
+\renewcommand\Authands{ and }
+
+% Bibliography format
+\usepackage[round]{natbib} 
+\bibliographystyle{plainnat}
+
+% For using Computer Modern version of blackboard symbols
+\AtBeginDocument{
+  \DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+  \DeclareSymbolFontAlphabet{\mathbb}{AMSb}}
+
+% Math shortcuts
+\input{math-shortcuts}
+
+% -------------------------------------------------------------------------
+
+
+\title{Normal lemma}
+\author{Spencer Woody}
+\date{\today}
+
+% -------------------------------------------------------------------------
+% Begin document
+
+\begin{document}
+
+\maketitle
+
+% -------------------------------------------------------------------------
+% BODY
+
+\paragraph{Model}
+
+
+\begin{align*}
+  (y \mid \theta) &\sim \N(R\theta, \Omega) \\
+  \theta &\sim \N(m, \Sigma)
+\end{align*}
+
+\paragraph{Joint distribution}
+
+Let $\I$ be the identity matrix, and $\Oh$ be a matrix of all
+zeros. Furthermore, define the random variable $x \sim \N(0,
+\Omega)$. The joint distribution of $(y, \theta)$ can be decomposed as
+follows:
+
+\begin{align*}
+  \begin{bmatrix}
+    y \\ \theta
+  \end{bmatrix}
+  &=
+    \begin{bmatrix}
+      R \\ \I
+    \end{bmatrix} \theta +
+  \begin{bmatrix}
+    \I \\ \Oh
+  \end{bmatrix} x.
+\end{align*}
+%
+%
+From this, the expectation is 
+\begin{align*}
+  \E 
+  \left(
+  \begin{bmatrix}
+    y \\ \theta
+  \end{bmatrix}
+  \right)
+  &=
+    \begin{bmatrix}
+      R \\ \I
+    \end{bmatrix} m + 0 \\
+  &= \begin{bmatrix}
+      Rm \\ m
+    \end{bmatrix} ,
+\end{align*}
+and the covariance is
+\begin{align*}
+  \Cov 
+  \left(
+  \begin{bmatrix}
+    y \\ \theta
+  \end{bmatrix}
+  \right)
+  &=
+    \begin{bmatrix}
+      R \\ \I
+    \end{bmatrix} \Sigma
+  \begin{bmatrix}
+    R \\ \I
+  \end{bmatrix}^T +
+  \begin{bmatrix}
+    \I \\ \Oh
+  \end{bmatrix} \Omega
+  \begin{bmatrix}
+    \I \\ \Oh
+  \end{bmatrix} ^T \\
+  &=
+    \begin{bmatrix}
+      R^T \Sigma R + \Omega & R\Sigma \\
+      \Sigma R^T & \Sigma
+    \end{bmatrix}.
+\end{align*}
+%
+%
+Therefore, the joint distribution of $(y, \theta)$ can be expressed as
+%
+%
+\begin{align*}
+  \begin{bmatrix}
+    y \\ \theta
+  \end{bmatrix}
+  &\sim
+    \N 
+    \left(
+    \begin{bmatrix}
+      Rm \\ m
+    \end{bmatrix} ,
+  \begin{bmatrix}
+      R^T \Sigma R + \Omega & R\Sigma \\
+      \Sigma R^T & \Sigma
+    \end{bmatrix}
+    \right).
+\end{align*}
+
+% -------------------------------------------------------------------------
+% End document
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

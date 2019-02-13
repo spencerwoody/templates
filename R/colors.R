@@ -1,4 +1,6 @@
 
+## http://research.stowers.org/mcm/efg/R/Color/Chart/ColorChart.pdf
+
 library(gplots)
 library(stringr)
 

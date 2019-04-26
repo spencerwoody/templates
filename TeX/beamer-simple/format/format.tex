@@ -8,6 +8,9 @@
 \usepackage[default]{roboto} % Sans sefif body text
 \usepackage{mathpazo} % Palatino for math
 \usepackage{inconsolata} % Inconsolata fixed width font
+\usepackage{tikz}
+\usepackage{ragged2e}
+\justifying
 
 % Bibliography
 \usepackage[round]{natbib} 
@@ -26,7 +29,62 @@
 \usepackage{amssymb}
 \usepackage{xcolor}
 
+
+
 % Formatting
+\setbeamertemplate{caption}[numbered]
+
+\setbeamertemplate{title page}
+{
+  \begin{minipage}[b][\paperheight]{\textwidth}
+    \vfill
+    \ifx\inserttitle\@empty%
+    \else%
+    {\raggedright\linespread{0.8}\usebeamerfont{title}\usebeamercolor[fg]{title}
+      \scshape\MakeLowercase{\inserttitle}\par}%
+    \vspace*{0.5em}
+    \fi%
+    \ifx\insertsubtitle\@empty%
+    \else%
+    {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+    \vspace*{0.5em}
+    \hrule
+    \fi%
+    \vspace*{0.5em}
+    \ifx\insertauthor\@empty%
+    \else%
+    {\usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor\par}%
+    \vspace*{0.25em}
+    \fi%
+    % Institute
+    \ifx\insertinstitut\@empty%
+    \else%
+    \vspace*{3mm}
+    {\usebeamerfont{institute}\usebeamercolor[fg]{institute}\insertinstitute\par}%
+    \fi%
+        \vspace*{3mm}
+        % Date
+    \ifx\insertdate\@empty%
+    \else%
+    {\usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate\par}%
+    \fi%
+    \vspace*{5mm}
+    % \vfill
+    % -------------------------------------------------------------------------
+    % -------------------------------------------------------------------------
+    % -------------------------------------------------------------------------
+    % -------------------------------------------------------------------------
+    % University logo; if none, comment out
+    \includegraphics[width=0.5\textwidth]{img/department-logo.png}
+    % -------------------------------------------------------------------------
+    % -------------------------------------------------------------------------
+    % -------------------------------------------------------------------------
+    % -------------------------------------------------------------------------
+  \vfill
+  \vspace*{5mm}
+  \end{minipage}
+}
+
 \setbeamertemplate{frametitle}
   {\begin{flushleft}\smallskip 
     \insertframetitle\par 
@@ -36,7 +94,7 @@
 \setbeamertemplate{footline}[text line]{%
     \hfill\strut{%
         \scriptsize\sf\color{black!60}%
-        \quad\insertframenumber
+        \quad\insertframenumber / \inserttotalframenumber
     }%
     \hfill
 }
@@ -45,7 +103,10 @@
   \hfill%
   \usebeamercolor[fg]{page number in head/foot}%
   \usebeamerfont{page number in head/foot}%
+  % Use this line for only the current frame number
   \setbeamertemplate{page number in head/foot}[framenumber]%
+  % Use this line for frame number and *total* frame number
+    % \setbeamertemplate{page number in head/foot}[totalframenumber]%
   \usebeamertemplate*{page number in head/foot}\kern1.5em\vskip8pt
 }
 
@@ -54,6 +115,8 @@
 
 % % Define some colors:
 
+% Colors from R; see following page
+% http://research.stowers.org/mcm/efg/R/Color/Chart/ColorChart.pdf
 \input{format/r-colors}
 
 % \definecolor{DarkFern}{HTML}{407428}
@@ -65,17 +128,22 @@
 % \colorlet{DarkRed}{red!70!black}
 % \colorlet{DarkBlue}{blue!70!black}
 % \colorlet{DarkGreen}{green!70!black}
- 
+
+% Official UT colors. See style guide:
+% https://brand.utexas.edu/identity/color/
+\definecolor{burntorange}{HTML}{BF5700}
+\definecolor{mygrey}{HTML}{333f48}
+
 % % Use the colors:
-% \setbeamercolor{title}{fg=dodgerblue}
-% \setbeamercolor{structure}{fg=Fern}
-% \setbeamercolor{titlelike}{parent=structure}
+\setbeamercolor{title}{fg=burntorange}
+\setbeamercolor{structure}{fg=burntorange}
+\setbeamercolor{titlelike}{parent=structure}
 % \setbeamercolor{frametitle}{fg=DarkFern}
-% \setbeamercolor{normal text}{fg=DarkCharcoal}
+\setbeamercolor{normal text}{fg=mygrey}
 % \setbeamercolor{block title}{fg=black,bg=Fern!25!white}
-% \setbeamercolor{block body}{fg=black,bg=Fern!25!white}
+\setbeamercolor{block body}{fg=mygrey,bg=white}
 % \setbeamercolor{alerted text}{fg=AlertColor}
-% \setbeamercolor{itemize item}{fg=Charcoal}
+\setbeamercolor{itemize item}{fg=mygrey}
 
 
 %%% Local Variables:

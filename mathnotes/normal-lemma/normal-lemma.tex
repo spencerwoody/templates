@@ -117,7 +117,7 @@ and the covariance is
   \end{bmatrix} ^T \\
   &=
     \begin{bmatrix}
-      R^T \Sigma R + \Omega & R\Sigma \\
+      R \Sigma R^T + \Omega & R\Sigma \\
       \Sigma R^T & \Sigma
     \end{bmatrix}.
 \end{align*}
@@ -137,7 +137,7 @@ Therefore, the joint distribution of $(y, \theta)$ can be expressed as
       Rm \\ m
     \end{bmatrix} ,
   \begin{bmatrix}
-      R^T \Sigma R + \Omega & R\Sigma \\
+      R \Sigma R^T + \Omega & R\Sigma \\
       \Sigma R^T & \Sigma
     \end{bmatrix}
     \right).

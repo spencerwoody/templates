@@ -1,20 +1,41 @@
 
 % Formatting the presentation
+% Change this file to change or remove the logo
 \input{format/format}
 
+% Use this line to produce Section title pages
+% \AtBeginSection{\frame{\sectionpage}}
 
+% -------------------------------------------------------------------------
+% Title and (optional) subtitle
 
 % Title slide
-\title[Beamer template]{A simple, legible beamer template}
+\title[Beamer template]{Simple beam er template}
+\subtitle{Modernizing an antiquated style}
 
-\author{Author One\inst{1} \and Author Two\inst{2}}
+% -------------------------------------------------------------------------
+% Author(s)
 
-\institute{\inst{1}University One \and
-  \inst{2}University Two}
+% Single author
+\author{Spencer \textsc{Woody}}
+% \institute{The University of Texas at Austin}
 
+
+% Several authors, with different institution
+% \author{\textbf{Author One}\inst{1} \and Author Two\inst{2} \and Author Three\inst{2}}
+
+% \institute{\inst{1}University One \and
+%   \inst{2}University Two}
+
+% % Several authors, same institution   
+% \author{Author One \;$\cdot$\; Author Two}
+
+% \institute{University of Texas at Austin}
+
+% -------------------------------------------------------------------------
+% Date
 \date{\today} 
 
-% BEGIN DOCUMENT ---------------------------------------------------
 
 % -------------------------------------------------------------------------
 % Begin document
@@ -54,3 +75,7 @@
 
 
 \end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

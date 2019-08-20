@@ -1,0 +1,81 @@
+\message{ !name(../main.tex)}
+
+% -------------------------------------------------------------------------
+% Preamble
+
+% Page format
+\documentclass[letter, 10pt]{article} % Set the paper size and font
+                                      % size (10pt might be too small)
+
+\usepackage[margin = 1.5in]{geometry} % Set the margins
+
+% Fonts
+\usepackage{mathpazo} % Palatino for main and math text
+\usepackage{inconsolata} % Inconsolata fixed width font
+
+% Basics
+\usepackage{setspace}
+\usepackage{graphicx} % including images
+\usepackage{amsmath} 
+\usepackage{amssymb}
+\usepackage{subcaption}
+\usepackage{enumerate}
+\usepackage{booktabs}
+
+\usepackage{authblk}            % Multiple authors
+\renewcommand\Authands{ and }
+
+% Bibliography format
+\usepackage[round]{natbib} 
+\bibliographystyle{plainnat}
+
+% For using Computer Modern version of blackboard symbols
+\AtBeginDocument{
+  \DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+  \DeclareSymbolFontAlphabet{\mathbb}{AMSb}}
+
+% -------------------------------------------------------------------------
+% Title, authors, date
+
+\title{Article template}
+
+
+
+\author{Spencer Woody\footnote{The University of Texas at Austin,
+    Department of Statistics and Data Science. Email:
+    \texttt{spencer.woody@utexas.edu}}}
+
+% For multiple authors:
+
+% \author[1]{Author One\thanks{Corresponding author. Email to
+%     \texttt{name@domain.com}}}
+
+% \author[2]{Author Two}
+
+% \affil[1]{Institution One}
+
+% \affil[2]{Insitution Two}
+
+
+% \date{\today}
+
+% -------------------------------------------------------------------------
+%%
+%% BEGIN DOCUMENT
+%%
+% -------------------------------------------------------------------------
+
+\begin{document}
+
+\message{ !name(input/intro.tex) !offset(-63) }
+\begin{align}
+  \label{eq:1}
+  E &= mc^2,
+\end{align}
+\message{ !name(../main.tex) !offset(46) }
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

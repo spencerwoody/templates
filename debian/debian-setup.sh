@@ -11,8 +11,20 @@ sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/debian stretc
 sudo apt update
 sudo apt upgrade -y
 
+# For MATE terminal
+##env TERM=xterm-256color /bin/bash
+
 
 # Install essentials
-sudo apt install emacs git r-base texlive-full libcurl4-openssl-dev  libxml2-dev libssl-dev libudunits2-dev libgdal-dev libprotobuf-dev protobuf-compiler libv8-dev libnode-dev libjq-dev ufw
+sudo apt install emacs git r-base texlive-full libcurl4-openssl-dev  libxml2-dev libssl-dev libudunits2-dev libgdal-dev libprotobuf-dev protobuf-compiler libv8-dev libnode-dev libjq-dev ufw system-config-printer darktable
 
 # R CMD install.packages(c("tidyverse", "Rcpp", "RcppArmadillo", "RcppEigen", "RcppParallel", "RcppProgress", "sf", "glmnet"))
+
+## shorter grub time
+
+## /etc/default/grub
+
+## lightdm
+
+## /usr/share/lightdm/lightdm.conf.d/01_my.conf
+

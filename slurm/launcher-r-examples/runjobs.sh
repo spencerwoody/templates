@@ -1,25 +1,25 @@
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
-R CMD BATCH myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout
+Rscript myscript.R > Rout/job-$LAUNCHER_JID.Rout

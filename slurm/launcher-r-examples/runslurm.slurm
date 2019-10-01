@@ -22,26 +22,38 @@
 #SBATCH -t 00:05:00 # Time
 #SBATCH --mail-user=spencer.woody@utexas.edu
 #SBATCH --mail-type=all    # Send email at begin and end of job
-##SBATCH -A selective_inference
+#SBATCH -A selective_inference # Project name
 #------------------------------------------------------
 
-# Load modules
+# These don't change
+export LAUNCHER_PLUGIN_DIR=$LAUNCHER_DIR/plugins
+export LAUNCHER_RMI=SLURM
+
+###############################################################################
+#                                 Load modules                                #
+###############################################################################
+
 module load git
 module load launcher
 module load intel/17.0.4
 module load impi/17.0.3
 module load Rstats
 
-# These don't change
-export LAUNCHER_PLUGIN_DIR=$LAUNCHER_DIR/plugins
-export LAUNCHER_RMI=SLURM
+###############################################################################
+#           Processes per node (comment out for launcher to set it)           #
+###############################################################################
 
-# 
 export LAUNCHER_PPN=4
 
-# Set job script
+###############################################################################
+#                                  Job script                                 #
+###############################################################################
+
 export LAUNCHER_JOB_FILE=./runjobs.sh
- 
-# Launch LAUNCHER
+
+###############################################################################
+#                              Launcher launcher                              #
+###############################################################################
+
 $LAUNCHER_DIR/paramrun
 

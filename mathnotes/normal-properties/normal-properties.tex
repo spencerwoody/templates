@@ -1,0 +1,110 @@
+
+% -------------------------------------------------------------------------
+% Preamble
+
+\documentclass[letter]{article}
+
+% Fonts
+
+\usepackage{times}
+\usepackage{inconsolata}
+
+% Basics
+\usepackage{setspace}
+\usepackage{graphicx} % including images
+\usepackage{amsmath} 
+\usepackage{amssymb}
+\usepackage{subcaption}
+\usepackage{enumerate}
+\usepackage{booktabs}
+
+
+\usepackage{authblk}            % Multiple authors
+\renewcommand\Authands{ and }
+
+% Bibliography format
+\usepackage[round]{natbib} 
+\bibliographystyle{plainnat}
+
+% For using Computer Modern version of blackboard symbols
+\AtBeginDocument{
+  \DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+  \DeclareSymbolFontAlphabet{\mathbb}{AMSb}}
+
+% Math shortcuts
+\input{math-shortcuts}
+
+% -------------------------------------------------------------------------
+
+
+\title{Some properties of the Gaussian distribution}
+\author{Spencer Woody}
+\date{\today}
+
+% -------------------------------------------------------------------------
+% Begin document
+
+\begin{document}
+
+\maketitle
+
+% -------------------------------------------------------------------------
+% BODY
+
+Denote the normal density function
+\begin{align*}
+  \phi(x) = \frac{1}{\sqrt{2\pi}} \exp \left( - \frac{1}{2} x^2 \right). 
+\end{align*}
+
+Its derivative is
+\begin{align*}
+  \frac{\dee}{\dee x} \phi(x) &=
+  \frac{1}{\sqrt{2\pi}} \exp \left( - \frac{1}{2} x^2 \right) \cdot
+  (-x) \\
+  &= -x  \phi(x)
+\end{align*}
+
+The CDF is
+\begin{align*}
+  \Phi(x) &= \int_{-\infty}^{x} \phi(t) \dee t
+\end{align*}
+and from the fundamental theorem of calculus, the derivative of the CDF is
+\begin{align*}
+  \frac{\dee}{\dee x} \Phi(x) = \Phi'(x) = \phi(x)
+\end{align*}
+
+The derivative of the inverse CDF is found using the identity shown in Appendix~\ref{sec:deriv-inverse-funct},
+\begin{align*}
+  \frac{\dee}{\dee p}\Phi^{-1}(p) &= \frac{1}{\Phi'(\Phi^{-1}(p))} \\
+                                  &= \frac{1}{\phi(\Phi^{-1}(p))}
+\end{align*}
+
+
+% -------------------------------------------------------------------------
+% Appendix
+
+\appendix
+
+\section{Derivative of an inverse function}
+\label{sec:deriv-inverse-funct}
+
+For a one-to-one function $f$, the derivative of the inverse function
+is found as follows:
+\begin{align*}
+  f(f^{-1}(x)) &= x \\
+   \frac{\dee}{\dee x} f(f^{-1}(x)) &= \frac{\dee}{\dee x} x  \\
+   f'(f^{-1}(x)) \frac{\dee}{\dee x} f^{-1}(x) &= 1 \\
+  \frac{\dee}{\dee x} f^{-1}(x) &= \frac{1}{f'(f^{-1}(x))}
+\end{align*}
+
+
+
+% -------------------------------------------------------------------------
+% End document
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
